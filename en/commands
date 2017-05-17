@@ -1,5 +1,6 @@
 *PLAY*MUSIC*|*LAUNCH*PLAYLIST*==jv_pg_mp_play_music && say "Playing music."
-*STOP*MUSIC*==jv_pg_mp_stop_music && say "Music stopped."
+*PAUSE*MUSIC*|*PAUSE*PLAYLIST*==jv_pg_mp_pause_music && say "Music paused."
+*STOP*MUSIC*|*STOP*PLAYLIST*==jv_pg_mp_stop_music && say "Music stopped."
 *NEXT*SONG*|*NEXT*MUSIC*==jv_pg_mp_next_music && say "Next song."
 *PREVIOUS*SONG*|*PREVIOUS*MUSIC*==jv_pg_mp_prev_music && say "Previous song."
 *SHUFFLE*SONG*|*SHUFFLE*PLAYLIST*|*SHUFFLE*MUSIC*==jv_pg_mp_shuffle_playlist && jv_pg_mp_play_music && say "Playlist shuffled and launched."

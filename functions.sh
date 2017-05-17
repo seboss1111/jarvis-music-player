@@ -10,6 +10,11 @@ jv_pg_mp_stop_music()
   xmms2 stop
 }
 
+jv_pg_mp_pause_music()
+{
+  xmms2 pause
+}
+
 jv_pg_mp_next_music()
 {
   xmms2 next

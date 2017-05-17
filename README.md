@@ -10,6 +10,9 @@ Play/Stop/Shuffle a local music playlist with <a target="_blank" href="http://do
 You: Play music
 Jarvis: Playing music.
 
+You: Pause music
+Jarvis: Music paused.
+
 You: Stop music
 Javis: Music stopped.
 
