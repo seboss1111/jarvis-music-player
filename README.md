@@ -8,7 +8,7 @@ Play/Stop/Shuffle a local music playlist with <a target="_blank" href="http://do
 ## Usage
 ```
 You: Play music
-Jarvis: Playlist launched.
+Jarvis: Playing music.
 
 You: Stop music
 Javis: Music stopped.
@@ -22,8 +22,8 @@ Jarvis: Previous song.
 You: Shuffle playlist
 Jarvis: Playlist shuffled and launched.
 
-You: Update playlist
-Jarvis: Playlist updated.
+You: Initialize playlist
+Jarvis: Playlist initialized.
 ```
 
 
