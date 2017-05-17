@@ -1,46 +1,51 @@
-<!---
-IMPORTANT
-=========
-This README.md is displayed in the WebStore as well as within Jarvis app
-Please do not change the structure of this file
-Fill-in Description, Usage & Author sections
-Make sure to rename the [en] folder into the language code your plugin is written in (ex: fr, es, de, it...)
-For multi-language plugin:
-- clone the language directory and translate commands/functions.sh
-- optionally write the Description / Usage sections in several languages
--->
 ## Description
+Play/Stop/Shuffle a local music playlist with <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a>.
 
-A simple music player.
-Required :
-	- xmms2 (it will be installed during installation)
 
-configuration:
-	music path folder
+<img src="https://raw.githubusercontent.com/QuentinCG/jarvis-music-player/master/presentation.png" width="500">
 
-After installation you have to update music by commands
 
 ## Usage
 ```
-You: play music
-Jarvis: Well, let's listen music
-```
-```
-You: stop music
-Jarvis: music terminated
-```
-```
-You: next song
-Jarvis: next song
-```
-```
-You: previous song
-Jarvis: previous song
-```
-```
-You: update music
-Jarvis: music updated
+You: Play music
+Jarvis: Playlist launched.
+
+You: Stop music
+Javis: Music stopped.
+
+You: Next song
+Jarvis: Next song.
+
+You: Previous song
+Jarvis: Previous song.
+
+You: Shuffle playlist
+Jarvis: Playlist shuffled and launched.
 ```
 
+
+## How to install
+
+1) Connect a speaker to the Jack port or to any USB port.
+
+2) Copy songs to a specific folder (keep in mind the path)
+
+3) Add this plugin to your <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a> (<a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">more info here</a>): ```./jarvis.sh -p https://github.com/QuentinCG/jarvis-music-player```
+
+4) Configure the <a target="_blank" href="https://github.com/QuentinCG/jarvis-music-player/blob/master/config.sh">configuration file</a> to match your requirements
+
+5) Enjoy
+
+
 ## Author
-[Advince](https://github.com/advince/)
+[Quentin Comte-Gaz](http://quentin.comte-gaz.com/) inspired and improved from [Advince](https://github.com/advince/jarvis-music-player).
+
+
+## License
+
+This project is under MIT license. This means you can use it as you want (just don't delete the plugin header).
+
+
+## Contribute
+
+If you want to add more examples or improve the plugin, just create a pull request with proper commit message and right wrapping.
