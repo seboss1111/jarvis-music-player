@@ -21,6 +21,9 @@ Jarvis: Previous song.
 
 You: Shuffle playlist
 Jarvis: Playlist shuffled and launched.
+
+You: Update playlist
+Jarvis: Playlist updated.
 ```
 
 

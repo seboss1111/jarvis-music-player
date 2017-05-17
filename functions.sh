@@ -1,35 +1,40 @@
-#!/bin/bash
-# Here you can create functions which will be available from the commands file
-# You can also use here user variables defined in your config file
-# To avoid conflicts, name your function like this
-# pg_XX_myfunction () { }
-# pg for PluGin
-# XX is a short code for your plugin, ex: ww for Weather Wunderground
-# You can use translations provided in the language folders functions.sh
+#!/usr/bin/env bash
 
-
-jv_pg_play_music() {
-	say "$(jv_pg_music_lg pl)"
-    xmms2 play
+jv_pg_mp_play_music()
+{
+  say "$(jv_pg_mp_lang play_music)"
+  xmms2 play
 }
 
-jv_pg_stop_music() {
-	xmms2 stop
-	say "$(jv_pg_music_lg st)"
+jv_pg_mp_stop_music()
+{
+  say "$(jv_pg_mp_lang stop_music)"
+  xmms2 stop
 }
 
-jv_pg_next_music() {
-	say "$(jv_pg_music_lg nx)"
-	xmms2 next
+jv_pg_mp_next_music()
+{
+  say "$(jv_pg_mp_lang next_song)"
+  xmms2 next
 }
 
-jv_pg_prev_music() {
-	say "$(jv_pg_music_lg pv)"
-	xmms2 prev
+jv_pg_mp_prev_music()
+{
+  say "$(jv_pg_mp_lang previous_song)"
+  xmms2 prev
 }
 
-jv_pg_update_music() {
-	say "$(jv_pg_music_lg up)"
-	xmms2 playlist clear
-	xmms2 add $music_directory
+jv_pg_mp_update_music()
+{
+  say "$(jv_pg_mp_lang update_playlist)"
+  xmms2 playlist clear
+  xmms2 add $var_jv_pg_mp_music_directory
+}
+
+jv_pg_mp_shuffle_playlist()
+{
+  say "$(jv_pg_mp_lang shuffle_playlist)"
+  xmms2 playlist clear
+  xmms2 add $var_jv_pg_mp_music_directory
+  xmms2 playlist shuffle
 }
