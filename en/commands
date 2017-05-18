@@ -15,3 +15,4 @@
 *VOLUME*SONG*DEFAULT*|*SONG*VOLUME*DEFAULT*==jv_pg_mp_set_volume $var_jv_pg_mp_default_volume && say "Volume set to default."
 *CURRENT*MUSIC*|*CURRENT*SONG*==jv_pg_mp_say_current_music
 *NUMBER*MUSIC*|*NUMBER*SONG*==jv_pg_mp_say_nb_music
+*PLAYLIST*TIME*|*MUSIC*TIME*==jv_pg_mp_say_playlist_time

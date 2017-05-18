@@ -40,6 +40,9 @@ Jarvis: Current music is Star Wars Imperial March.
 
 You: Give the number of music.
 Jarvis: There is 54 music in the playlist.
+
+You: Give the playlist time.
+Jarvis: Playlist time is 45 minutes.
 ```
 
 
