@@ -66,3 +66,17 @@ jv_pg_mp_go_to_specific_music()
 
   xmms2 jump "$music_number"
 }
+
+# Set the volume
+# $1 (int): Volume percentage (0 to 100)
+#
+# return (int): 0 if success, 1 if failed
+jv_pg_mp_set_volume()
+{
+  if [ "$4" -l 0 -o "$1" -g 100 ]; then
+    say "$(jv_pg_mp_lang invalid_volume "$1")"
+    return 1
+  fi
+
+  xmms2 server volume "$1"
+}

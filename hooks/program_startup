@@ -1,2 +1,3 @@
-# Update music playlist without saying anything
+# Initialize music playlist without saying anything
 jv_pg_mp_update_music
+jv_pg_mp_set_volume $var_jv_pg_mp_default_volume
