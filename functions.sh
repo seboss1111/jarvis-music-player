@@ -80,3 +80,18 @@ jv_pg_mp_set_volume()
 
   xmms2 server volume "$1"
 }
+
+# Say the name of the current music
+#
+# return (int): 0 if success, 1 if failed
+jv_pg_mp_say_current_music()
+{
+  current_music=`xmms2 current | sed 's/[a-zA-Z]*:\s//' | sed 's/:\s[0-9]*:[0-9]*\s[a-zA-Z]*\s[0-9]*:[0-9]*//'`
+
+  if [ "$current_music" == "" ];then
+    say "$(jv_pg_mp_lang no_current_music)"
+    return 1
+  fi
+
+  say "$(jv_pg_mp_lang current_music_is "$current_music")"
+}

@@ -12,7 +12,7 @@ Jarvis: Playing music.
 
 You: Play a specific music
 Jarvis: Which music do you want to listen?
-You: Star Wars
+You: Star wars
 
 You: Pause music
 Jarvis: Music paused.
@@ -34,6 +34,9 @@ Jarvis: Playlist initialized.
 
 You: Set song volume to very high/high/medium/low/muted/default.
 Jarvis: Volume set to very high/high/medium/low/muted/default.
+
+You: Give the current music.
+Jarvis: Current music is Star Wars Imperial March.
 ```
 
 
