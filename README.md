@@ -10,6 +10,10 @@ Play/Stop/Shuffle a local music playlist with <a target="_blank" href="http://do
 You: Play music
 Jarvis: Playing music.
 
+You: Play a specific music
+Jarvis: Which music do you want to listen?
+You: Star Wars
+
 You: Pause music
 Jarvis: Music paused.
 
@@ -27,6 +31,9 @@ Jarvis: Playlist shuffled and launched.
 
 You: Initialize playlist
 Jarvis: Playlist initialized.
+
+You: Set song volume to very high/high/medium/low/muted/default.
+Jarvis: Volume set to very high/high/medium/low/muted/default.
 ```
 
 
