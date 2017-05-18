@@ -37,6 +37,9 @@ Jarvis: Volume set to very high/high/medium/low/muted/default.
 
 You: Give the current music.
 Jarvis: Current music is Star Wars Imperial March.
+
+You: Give the number of music.
+Jarvis: There is 54 music in the playlist.
 ```
 
 

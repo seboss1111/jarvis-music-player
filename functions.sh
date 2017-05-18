@@ -95,3 +95,18 @@ jv_pg_mp_say_current_music()
 
   say "$(jv_pg_mp_lang current_music_is "$current_music")"
 }
+
+# Say the number of music in the playlist
+#
+# return (int): 0 if success, 1 if failed
+jv_pg_mp_say_nb_music()
+{
+  nb_music=`xmms2 list | grep '^\s\+\[\|^->\[' | wc -l`
+
+  if [ "$nb_music" == "0" ];then
+    say "$(jv_pg_mp_lang no_music_in_the_playlist)"
+    return 1
+  fi
+
+  say "$(jv_pg_mp_lang nb_of_music_is "$nb_music")"
+}

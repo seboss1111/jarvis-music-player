@@ -14,3 +14,4 @@
 *VOLUME*SONG*MUTE*|*SONG*VOLUME*MUTE*==jv_pg_mp_set_volume 0 && say "Music muted."
 *VOLUME*SONG*DEFAULT*|*SONG*VOLUME*DEFAULT*==jv_pg_mp_set_volume $var_jv_pg_mp_default_volume && say "Volume set to default."
 *CURRENT*MUSIC*|*CURRENT*SONG*==jv_pg_mp_say_current_music
+*NUMBER*MUSIC*|*NUMBER*SONG*==jv_pg_mp_say_nb_music
