@@ -3,8 +3,12 @@
 # Update/Initialize the playlist
 jv_pg_mp_update_music()
 {
-  xmms2 playlist clear
-  xmms2 add $var_jv_pg_mp_music_directory
+  if [ -d "$var_jv_pg_mp_music_directory" ] ; then
+    xmms2 playlist clear
+    xmms2 add $var_jv_pg_mp_music_directory
+  else
+    jv_error "$(jv_pg_mp_lang invalid_path "$var_jv_pg_mp_music_directory")"
+  fi
 }
 
 # Shuffle the current playlist
