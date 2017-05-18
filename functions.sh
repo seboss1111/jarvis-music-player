@@ -73,7 +73,7 @@ jv_pg_mp_go_to_specific_music()
 # return (int): 0 if success, 1 if failed
 jv_pg_mp_set_volume()
 {
-  if [ "$4" -l 0 -o "$1" -g 100 ]; then
+  if [[ "$1" -lt 0 || "$1" -gt 100 ]]; then
     say "$(jv_pg_mp_lang invalid_volume "$1")"
     return 1
   fi
