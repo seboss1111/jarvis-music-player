@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # Update/Initialize the playlist
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_mp_update_music()
 {
   if [ -d "$var_jv_pg_mp_music_directory" ] ; then
@@ -8,6 +10,7 @@ jv_pg_mp_update_music()
     xmms2 add $var_jv_pg_mp_music_directory
   else
     jv_error "$(jv_pg_mp_lang invalid_path "$var_jv_pg_mp_music_directory")"
+    return 1
   fi
 }
 
@@ -62,6 +65,4 @@ jv_pg_mp_go_to_specific_music()
   fi
 
   xmms2 jump "$music_number"
-
-  return 0
 }
