@@ -1,5 +1,5 @@
 *SELECT*MUSIC*|*PLAY*SPECIFIC*MUSIC*==say "Which music do you want to listen?"
->(*)==music="(1)" && jv_pg_mp_go_to_specific_music "$music" && jv_pg_mp_play_music && say "Playing music $music."
+>(*)==music="(1)" && jv_pg_mp_go_to_specific_music "$music" && (jv_pg_mp_play_music && say "Playing music $music.") || say "$music not found in playlist."
 *PLAY*MUSIC*|*LAUNCH*PLAYLIST*==jv_pg_mp_play_music && say "Playing music."
 *PAUSE*MUSIC*|*PAUSE*PLAYLIST*==jv_pg_mp_pause_music && say "Music paused."
 *STOP*MUSIC*|*STOP*PLAYLIST*==jv_pg_mp_stop_music && say "Music stopped."
