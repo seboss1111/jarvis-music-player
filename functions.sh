@@ -119,11 +119,11 @@ jv_pg_mp_say_playlist_time()
   playlist_time_string=`xmms2 list | sed -n -e '1i\0' -e 's/^.*(\([0-9]*\):\([0-9]*\))$/\1 60*\2++/gp' -e '$a\60op' | dc | sed -e 's/^ *//' -e 's/ /:/g'`
 
   playlist_time=0
-  if [ ${#playlist_time_string} -eq 1 || ${#playlist_time_string} -eq 2 ]; then
+  if [[ ${#playlist_time_string} -eq 1 || ${#playlist_time_string} -eq 2 ]]; then
     playlist_time=`echo "$playlist_time_string" | awk -F: '{ ($1/60) }'`
-  elif [ ${#playlist_time_string} -eq 5 ]; then
+  elif [[ ${#playlist_time_string} -eq 5 ]]; then
     playlist_time=`echo "$playlist_time_string" | awk -F: '{ print $1 + ($2/60) }'`
-  elif [ ${#playlist_time_string} -eq 8 ]; then
+  elif [[ ${#playlist_time_string} -eq 8 ]]; then
     playlist_time=`echo "$playlist_time_string" | awk -F: '{ print ($1*60) + $2 + ($3/60) }'`
   else
     say "$(jv_pg_mp_lang invalid_playlist_time "$playlist_time_string")"
