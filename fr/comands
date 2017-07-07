@@ -1,0 +1,18 @@
+*SELECT*MUSIC*|*PLAY*SPECIFIC*MUSIC*==say "Which music do you want to listen?"
+>(*)==music="(1)" && jv_pg_mp_go_to_specific_music "$music" && (jv_pg_mp_play_music && say "Playing music $music.") || say "$music not found in playlist."
+*PLAY*MUSIC*|*LAUNCH*PLAYLIST*==jv_pg_mp_play_music && say "Playing music."
+*PAUSE*MUSIC*|*PAUSE*PLAYLIST*==jv_pg_mp_pause_music && say "Music paused."
+*STOP*MUSIC*|*STOP*PLAYLIST*==jv_pg_mp_stop_music && say "Music stopped."
+*NEXT*SONG*|*NEXT*MUSIC*==jv_pg_mp_next_music && say "Next song."
+*PREVIOUS*SONG*|*PREVIOUS*MUSIC*==jv_pg_mp_prev_music && say "Previous song."
+*SHUFFLE*SONG*|*SHUFFLE*PLAYLIST*|*SHUFFLE*MUSIC*==jv_pg_mp_update_music && jv_pg_mp_shuffle_playlist && jv_pg_mp_play_music && say "Playlist shuffled and launched."
+*UPDATE*SONG*|*UPDATE*PLAYLIST*|*UPDATE*MUSIC*|*INITIALIZE*SONG*|*INITIALIZE*PLAYLIST*|*INITIALIZE*MUSIC*==jv_pg_mp_update_music && jv_pg_mp_play_music && say "Playlist initialized."
+*VOLUME*SONG*VERY*HIGH*|*SONG*VOLUME*VERY*HIGH*==jv_pg_mp_set_volume 100 && say "Volume set to very high."
+*VOLUME*SONG*HIGH*|*SONG*VOLUME*HIGH*==jv_pg_mp_set_volume 75 && say "Volume set to high."
+*VOLUME*SONG*MEDIUM*|*SONG*VOLUME*MEDIUM*==jv_pg_mp_set_volume 50 && say "Volume set to medium."
+*VOLUME*SONG*LOW*|*SONG*VOLUME*LOW*==jv_pg_mp_set_volume 25 && say "Volume set to low."
+*VOLUME*SONG*MUTE*|*SONG*VOLUME*MUTE*==jv_pg_mp_set_volume 0 && say "Music muted."
+*VOLUME*SONG*DEFAULT*|*SONG*VOLUME*DEFAULT*==jv_pg_mp_set_volume $var_jv_pg_mp_default_volume && say "Volume set to default."
+*CURRENT*MUSIC*|*CURRENT*SONG*==jv_pg_mp_say_current_music
+*NUMBER*MUSIC*|*NUMBER*SONG*==jv_pg_mp_say_nb_music
+*PLAYLIST*TIME*|*MUSIC*TIME*==jv_pg_mp_say_playlist_time
